@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Doppio+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Doppio One', sans-serif;
+}
+
+body {
+    background-color: #17202A;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.titulos {
+    width: 900px;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo {
+    font-size: 4em;
+    margin-left: 20px;
+}
+
+#empezarJuego {
+    margin-right: 20px;
+    padding: 5px 10px;
+    font-size: 2em;
+    outline: none;
+    border: none;
+    background-color: #CB4335;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#empezarJuego:active {
+    filter: brightness(80%);
+}
+
+.tablero {
+    width: 900px;
+    height: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 100vw;
+    max-height: 100vw;
+}
+
+.casilla {
+    margin: 7px;
+    border-radius: 10px;
+    background-color: dimgrey;
+    font-size: 0;
+}
+
+.seleccionado-j1 {
+    background-color: #EB984E;
+}
+
+.seleccionado-j2 {
+    background-color: #85C1E9;
+}
+
+.ganador {
+    animation: girar 1s ease-in-out;
+}
+
+@keyframes girar {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@media (max-width: 600px) {
+    #empezarJuego {
+        font-size: 1.5em;
+    }
+
+    .titulo {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 400px) {
+    #empezarJuego {
+        font-size: 1em;
+        margin-right: 15px;
+    }
+
+    .titulo {
+        font-size: 2.5em;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 300px) {
+    #empezarJuego {
+        font-size: 0.8em;
+        margin-right: 10px;
+    }
+
+    .titulo {
+        font-size: 2em;
+        margin-left: 10px;
+    }
+}
+
+@media (max-height: 1000px) {
+    .tablero {
+        max-height: 80vh;
+        max-width: 80vh;
+    }
+
+    .titulos {
+        max-height: 80vh;
+        max-width: 80vh;
+    }
+}
